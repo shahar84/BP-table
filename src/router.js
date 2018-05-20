@@ -1,21 +1,27 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
-import About from './views/About.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
+import DBP from './views/DBP.vue';
+import SBP from './views/SBP.vue';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'sbp',
+      component: SBP,
     },
     {
-      path: '/about',
-      name: 'about',
-      component: About
-    }
-  ]
-})
+      path: '/sbp',
+      name: 'sbp',
+      component: SBP,
+    },
+    {
+      path: '/dbp',
+      name: 'dbp',
+      component: DBP,
+    },
+  ],
+});
